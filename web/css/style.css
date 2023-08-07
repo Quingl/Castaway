@@ -1,0 +1,449 @@
+/* Обнуляющий стиль */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav, footer, header, aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input ::-ms-clear{display: none;}
+button{cursor: pointer;}
+button ::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*Обнуляющий стиль*/
+
+
+/*  */
+body{
+    /* width: 1440px; */
+    color: #fff;
+    font-family: sans-serif;
+    font-style: normal;
+    background: #191919;
+    padding: 0 4.38rem 0 4.38rem;
+}
+
+@media (min-width: 1440px) {
+    body{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        width: 1440px;
+        color: #fff;
+        font-family: sans-serif;
+        font-style: normal;
+        background: #191919;
+    }
+}
+
+
+/* a OPTIONS */
+a {
+    line-height: 2rem;
+    font-size: 1.0625rem;
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    /* text-decoration-color: #118DA8; */
+    transition: filter 0.7s linear;
+    border-radius: 0.3rem;
+  }
+  a:hover {
+    filter: drop-shadow(
+        0 0 13px #118da8
+    );
+    color: #fff;
+    transition: filter 0.1s linear;
+  }
+
+
+/* button OPTIONS */
+button {
+    border-radius: 0.375rem;
+    background: #118DA8;
+    line-height: 1.6875rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 0.75rem 0.94rem 0.75rem 1.25rem;
+    transition: filter 0.7s linear;
+}
+button:hover {
+    filter: drop-shadow(
+        0 0 15px #118da8
+    );
+    color: #fff;
+    transition: filter 0.1s linear;
+}
+
+/* input OPTIONS */
+input {
+    color: #118DA8;
+    background: #191919;
+    width: 32.625rem;
+    height: 5.125rem;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    border: 1px solid #191919;
+    font-size: large;
+    padding: 0 0 0 1.25rem;
+}
+input:hover {
+    filter: drop-shadow(
+        0 0 5px #118da8
+    );
+    border-radius: 0.375rem;
+    border: 1px solid #118da8;
+}
+
+/*  img OPTIONS  */
+img {
+    max-width: 100%;
+}
+
+/*  Header  */
+.header{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo{
+    filter: drop-shadow(
+        0 0 15px #118da8
+    );
+    padding: 2.69rem 0 2.69rem 3.12rem;
+}
+
+
+.navigation{
+    margin: 1.63rem 3.13rem 1.63rem 0;
+    padding: 1.25rem;
+    line-height: 1.6875rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+}
+
+
+.home{
+    color: #118DA8;
+}
+
+/* Main */
+
+
+.main_{
+    display: flex;
+    flex-direction: row;
+    font-size: 4.375rem;
+    align-items: center;
+}
+@media (max-width: 992px) {
+    .main{
+        flex-direction: column;
+    }
+}
+
+.main__block{
+    position: relative;
+}
+
+.main__stripes{
+    position: absolute;
+    top: -1.7rem;
+    left: -1.7rem;
+}
+
+.mainText{
+    line-height: 5.5rem;
+    letter-spacing: 0.3rem;
+    padding: 0 3.75rem 0 3.75rem;
+}
+.next{
+    display: inline-flex;
+    position: relative;
+}
+.next_underline{
+    position: absolute;
+    top: -1rem;
+    left: -0.3rem;
+}
+
+.jumbotron{
+    padding: 5rem 0 0 0;
+}
+
+/*  Chapters  */
+
+.chapters_{
+    font-family: DM Sans;
+    margin: 6.28rem 0 2.47rem 0;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-style: normal;
+}
+
+.chapters__header{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+.chapters__header__text{
+    padding: 0.46rem 0 1.65rem 0;
+    font-size: 4rem;
+    line-height: 4.95rem;
+    letter-spacing: 0.18rem;
+}
+.chapters__header__button{
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+
+.chapters__form{
+    margin: 2.47rem 0 2.47rem 0;
+    border-radius: 2rem;
+    background: #000;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    font-size: 1.0625rem;
+}
+@media (max-width: 992px) {
+    .chapters__form{
+        flex-direction: column;
+    }
+}
+.chapters__form__img{
+    padding: 2.5rem 3.31rem 2.5rem 2.5rem;
+}
+.chapters__form__list{
+    padding: 2.5rem 0 2.5rem 0;
+}
+
+.chapters__form__sectionButton{
+    background: #191919;
+    padding: 0 1rem 0 1rem;
+    margin: 0.47rem 0 0 0;
+}
+
+.chapters__form__episode{
+    color: #118DA8;
+    padding: 3rem 0 0 0;
+    line-height: 1.6875rem;
+}
+
+.chapters__form__title{
+    padding: 1.12rem 0 1.12rem 0;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    letter-spacing: 0.16rem;
+}
+.chapters__form__description{
+    padding: 1.75rem 1.31rem 0 0;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 1.375rem;
+    line-height: 2.0625rem;
+}
+.chapters__form__detailsButton{
+    margin: 1.12rem 0 0 0;
+    font-size: 1.0625rem;
+}
+
+/*  Biography  */
+
+.biography{
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: row;
+}
+@media (max-width: 992px) {
+    .biography{
+        flex-direction: column;
+    }
+}
+.bgInfo{
+    padding: 6.28rem 0 6.2rem 3.12rem;
+}
+
+.gearCircle{
+    margin: 0 0 0 0;
+    padding: 2.12rem 1.5rem 2.5rem 1.06rem;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    flex-shrink: 0;
+}
+
+.meet{
+    padding: 1.25rem 0 1.56rem 0;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    color: #118DA8;
+}
+
+.jacob{
+    padding: 0 0 6.25rem 0;
+}
+.name should{
+    margin: 0 0 0 3.75rem;
+    flex-shrink: 0;
+    padding: 6.25rem 3.13rem 0 0;
+}
+.aboutJacob{
+    padding: 1.75rem 2.12rem 0 0;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 2.0625rem;
+}
+
+.aboutJacob1{
+    padding: 2.06rem 3.88rem 1.13rem 0;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 2.0625rem;
+}
+
+/*  Subscribe form  */
+
+.subscribe_form{
+    background: #000;
+    border-radius: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 0;
+    padding: 0 0 3rem 0;
+    margin: 0 0 6.25rem 0;
+}
+@media (max-width: 992px) {
+    .subscribe_form{
+        flex-direction: column;
+    }
+}
+.subscribe{
+    font-size: 4.5rem;
+    line-height: 4.95rem;
+    letter-spacing: 0.18rem;
+    display: inline-flex;
+    position: relative;
+}
+
+.subscribe_stripes{
+    position: absolute;
+    top: 13rem;
+    left: -6.7rem;
+}
+
+.subText{
+    padding: 3.7rem 0 3.57rem 3.75rem;
+}
+.mail{
+    color: #118DA8;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+}
+
+.panels{
+    padding: 3.75rem 3.75rem 0 4.75rem;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+.email_box{
+    margin: 1.25rem 0 1.25rem 0;
+}
+.submit{
+}
+
+/*  Feedback  */
+
+
+.commentBack{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.comment {
+    margin: 0 0 1rem 0;
+    padding: 2rem;
+    width: 26.0625rem;
+    height: 20.0625rem;
+    border-radius: 2rem;
+    background: #000;
+}
+.commentMark{
+    padding: 0 0 1.31rem 0;
+}
+.commentText{
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+    padding: 0 3.5rem 1.19rem 0;
+}
+.commentName{
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 1.4375rem;
+    line-height: 1.8rem;
+    padding: 0 0 3.19rem 0;
+}
+
+
+/* Footer */
+
+.footer {
+    margin: 12.5rem 0 0 0;
+    padding: 0 0 6.25rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+    .footer{
+        flex-direction: column;
+    }
+}
+
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+}
+.footer__links {
+    display: flex;
+    flex-direction: column;
+}
+.footer__media {
+    gap: 2.5rem;
+}
