@@ -130,14 +130,14 @@ img {
 }
 
 /*  Header  */
-.header{
+.header_{
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.logo{
+.header__logo{
     filter: drop-shadow(
         0 0 15px #118da8
     );
@@ -145,7 +145,7 @@ img {
 }
 
 
-.navigation{
+.header__navigation{
     margin: 1.63rem 3.13rem 1.63rem 0;
     padding: 1.25rem;
     line-height: 1.6875rem;
@@ -189,7 +189,7 @@ img {
     letter-spacing: 0.3rem;
     padding: 0 3.75rem 0 3.75rem;
 }
-.main__text__underlineWord{
+.main__text__underline-word{
     display: inline-flex;
     position: relative;
 }
@@ -250,7 +250,7 @@ img {
     padding: 2.5rem 0 2.5rem 0;
 }
 
-.chapters__form__sectionButton{
+.chapters__form__sectionb-utton{
     background: #191919;
     padding: 0 1rem 0 1rem;
     margin: 0.47rem 0 0 0;
@@ -274,7 +274,7 @@ img {
     font-size: 1.375rem;
     line-height: 2.0625rem;
 }
-.chapters__form__detailsButton{
+.chapters__form__details-button{
     margin: 1.12rem 0 0 0;
     font-size: 1.0625rem;
 }
@@ -295,7 +295,7 @@ img {
     padding: 6.28rem 0 6.2rem 3.12rem;
 }
 
-.biography__list__circleButton{
+.biography__list__circle-button{
     margin: 0 0 0 0;
     padding: 2.12rem 1.5rem 2.5rem 1.06rem;
     border-radius: 50%;
@@ -304,7 +304,7 @@ img {
     flex-shrink: 0;
 }
 
-.biography__list__postscript{
+.biography__list__sign{
     padding: 1.25rem 0 1.56rem 0;
     font-size: 1.125rem;
     line-height: 1.6875rem;
@@ -338,7 +338,7 @@ img {
 
 /*  Subscribe form  */
 
-.subscribeForm_{
+.subscribe-form_{
     background: #000;
     border-radius: 2rem;
     display: flex;
@@ -348,11 +348,11 @@ img {
     margin: 0 0 6.25rem 0;
 }
 @media (max-width: 992px) {
-    .subscribeForm_{
+    .subscribe-form_{
         flex-direction: column;
     }
 }
-.subscribeForm__list__text{
+.subscribe-form__list__text{
     font-size: 4.5rem;
     line-height: 4.95rem;
     letter-spacing: 0.18rem;
@@ -366,35 +366,35 @@ img {
     left: -6.7rem;
 }
 
-.subscribeForm__list{
+.subscribe-form__list{
     padding: 3.7rem 0 3.57rem 3.75rem;
 }
-.subscribeForm__list__name{
+.subscribe-form__list__name{
     color: #118DA8;
     font-size: 1.125rem;
     line-height: 1.6875rem;
 }
 
-.subscribeForm__inputs{
+.subscribe-form__inputs{
     padding: 3.75rem 3.75rem 0 4.75rem;
     display: flex;
     flex-flow: column;
     height: 100%;
 }
-.subscribeForm__inputs__emailInp{
+.subscribe-form__inputs__email-inp{
     margin: 1.25rem 0 1.25rem 0;
 }
 
 /*  Feedback  */
 
 
-.commentBack_{
+.comment-back_{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.commentBack__Body {
+.comment-back__body {
     margin: 0 0 1rem 0;
     padding: 2rem;
     width: 26.0625rem;
@@ -403,12 +403,12 @@ img {
     background: #000;
 }
 
-.commentBack__Body__Text{
+.comment-back__body__text{
     font-size: 2.25rem;
     line-height: 2.7rem;
     padding: 0 3.5rem 1.19rem 0;
 }
-.commentBack__Body__Name{
+.comment-back__body__name{
     color: rgba(255, 255, 255, 0.70);
     font-size: 1.4375rem;
     line-height: 1.8rem;
