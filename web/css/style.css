@@ -184,12 +184,12 @@ img {
     left: -1.7rem;
 }
 
-.mainText{
+.main__text{
     line-height: 5.5rem;
     letter-spacing: 0.3rem;
     padding: 0 3.75rem 0 3.75rem;
 }
-.next{
+.main__text__underlineWord{
     display: inline-flex;
     position: relative;
 }
@@ -281,21 +281,21 @@ img {
 
 /*  Biography  */
 
-.biography{
+.biography_{
     flex-shrink: 0;
     display: flex;
     flex-flow: row;
 }
 @media (max-width: 992px) {
-    .biography{
+    .biography_{
         flex-direction: column;
     }
 }
-.bgInfo{
+.biography__list{
     padding: 6.28rem 0 6.2rem 3.12rem;
 }
 
-.gearCircle{
+.biography__list__circleButton{
     margin: 0 0 0 0;
     padding: 2.12rem 1.5rem 2.5rem 1.06rem;
     border-radius: 50%;
@@ -304,40 +304,41 @@ img {
     flex-shrink: 0;
 }
 
-.meet{
+.biography__list__postscript{
     padding: 1.25rem 0 1.56rem 0;
     font-size: 1.125rem;
     line-height: 1.6875rem;
     color: #118DA8;
 }
 
-.jacob{
+.biography__img{
     padding: 0 0 6.25rem 0;
 }
-.name should{
-    margin: 0 0 0 3.75rem;
+.biography__list__author {
     flex-shrink: 0;
     padding: 6.25rem 3.13rem 0 0;
+    font-size: 4.0625rem;
+    line-height: 4.95rem;
+    letter-spacing: 0.18rem;
+    padding: 0 0 1.75rem 0;
 }
-.aboutJacob{
-    padding: 1.75rem 2.12rem 0 0;
+.biography__list__description{
+    padding: 0 2.13rem 2.06rem 0;
     color: rgba(255, 255, 255, 0.70);
     font-size: 1.375rem;
-    font-weight: 400;
     line-height: 2.0625rem;
 }
 
-.aboutJacob1{
-    padding: 2.06rem 3.88rem 1.13rem 0;
+.biography__list__description2{
+    padding: 0 3.88rem 1.13rem 0;
     color: rgba(255, 255, 255, 0.70);
     font-size: 1.375rem;
-    font-weight: 400;
     line-height: 2.0625rem;
 }
 
 /*  Subscribe form  */
 
-.subscribe_form{
+.subscribeForm_{
     background: #000;
     border-radius: 2rem;
     display: flex;
@@ -347,11 +348,11 @@ img {
     margin: 0 0 6.25rem 0;
 }
 @media (max-width: 992px) {
-    .subscribe_form{
+    .subscribeForm_{
         flex-direction: column;
     }
 }
-.subscribe{
+.subscribeForm__list__text{
     font-size: 4.5rem;
     line-height: 4.95rem;
     letter-spacing: 0.18rem;
@@ -365,37 +366,35 @@ img {
     left: -6.7rem;
 }
 
-.subText{
+.subscribeForm__list{
     padding: 3.7rem 0 3.57rem 3.75rem;
 }
-.mail{
+.subscribeForm__list__name{
     color: #118DA8;
     font-size: 1.125rem;
     line-height: 1.6875rem;
 }
 
-.panels{
+.subscribeForm__inputs{
     padding: 3.75rem 3.75rem 0 4.75rem;
     display: flex;
     flex-flow: column;
     height: 100%;
 }
-.email_box{
+.subscribeForm__inputs__emailInp{
     margin: 1.25rem 0 1.25rem 0;
-}
-.submit{
 }
 
 /*  Feedback  */
 
 
-.commentBack{
+.commentBack_{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.comment {
+.commentBack__Body {
     margin: 0 0 1rem 0;
     padding: 2rem;
     width: 26.0625rem;
@@ -403,15 +402,13 @@ img {
     border-radius: 2rem;
     background: #000;
 }
-.commentMark{
-    padding: 0 0 1.31rem 0;
-}
-.commentText{
+
+.commentBack__Body__Text{
     font-size: 2.25rem;
     line-height: 2.7rem;
     padding: 0 3.5rem 1.19rem 0;
 }
-.commentName{
+.commentBack__Body__Name{
     color: rgba(255, 255, 255, 0.70);
     font-size: 1.4375rem;
     line-height: 1.8rem;
@@ -421,7 +418,7 @@ img {
 
 /* Footer */
 
-.footer {
+.footer_ {
     margin: 12.5rem 0 0 0;
     padding: 0 0 6.25rem 0;
     display: flex;
@@ -430,7 +427,7 @@ img {
 }
 
 @media (max-width: 992px) {
-    .footer{
+    .footer_{
         flex-direction: column;
     }
 }

@@ -10,7 +10,7 @@ function gradeSelector(grade){
     for(let i = 0; i < grade; i++){
         img += "<img src=\"img/star.png\">"
     }
-    return `<div class=\"commentGrade\">${img}</div>`
+    return `<div class=\"commentBack__Body__Grade\">${img}</div>`
 }
 
 async function service() {
@@ -30,10 +30,10 @@ async function service() {
 
     for (let obj of content){
         let elem = document.getElementById("commentContent");
-        elem.innerHTML += "<div class=\"comment\">" +
+        elem.innerHTML += "<div class=\"commentBack__Body\">" +
             `${gradeSelector(obj.grade)}` +
-            `<div class=\"commentText\">${obj.comment}</div>` +
-            `<div class=\"commentName\">${obj.name}</div>` +
+            `<div class=\"commentBack__Body__Text\">${obj.comment}</div>` +
+            `<div class=\"commentBack__Body__Name\">${obj.name}</div>` +
     "</div>";
     }
 }
