@@ -4,6 +4,9 @@
 //     name:"",
 // }
 
+
+
+
 function gradeSelector(grade){
     let img = "";
 
@@ -22,7 +25,6 @@ async function service() {
 
     for(let i in array){
         content.push(array[i]);
-        console.log(i);
     }
     console.log(array);
 

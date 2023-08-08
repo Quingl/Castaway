@@ -103,9 +103,32 @@
                 <div class="subscribe-form__list__text">Subscribe for updates <img class="subscribe_stripes" src="img/IMAGE (10).png" alt="subscribe_stripes"></div>
             </div>
             <div class="subscribe-form__inputs">
-                <div><input class="subscribe-form__inputs__name-inp" type="text" id="name" placeholder="Name"></div>
-                <div><input class="subscribe-form__inputs__email-inp" type="email" id="email" placeholder="Email"></div>
-                <button class="subscribe-form__inputs__button">Submit</button>
+
+                <form id ="grade-form" action="js/registrationForm.js" method="post">
+                    <label for="grade">
+                        Grade
+                        <select name="grade" required>
+                          <option value="5" selected>5</option>
+                          <option value="4">4</option>
+                          <option value="3">3</option>
+                          <option value="2">2</option>
+                          <option value="1">1</option>
+                        </select>
+                      </label>
+                      <br><br>
+                    <label for="name" required>
+                        Nickname
+                      <input type="text" name="name">
+                    </label>
+                    <br><br>
+                    <label for="comment">
+                        Reviev
+                        <input type="text" name="comment">
+                      </label>
+                      <br><br>
+                    <button type="submit">Сохранить</button>
+                    <div id="loader" class="hidden">Отправляем...</div>
+                  </form>
             </div>
         </div>
 
@@ -146,6 +169,7 @@
                 <a href="#"><img src="img/whiteThing.png" alt="whiteThing"></a>
             </div>
         </div>
+        <script src="js/registrationForm.js"></script>
         <script src="js/commentСontent.js"></script>
     </body>
     <div>
