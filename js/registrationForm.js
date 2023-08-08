@@ -31,7 +31,7 @@ function serializeForm(formNode) {
   }
 
   async function sendData(data) {
-    return await fetch('http://pavelsmirnov.somee.com/api/Comments', {
+    return await fetch('https://pavelsmirnov.somee.com/api/Comments', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
       body: data,
