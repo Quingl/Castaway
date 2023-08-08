@@ -7,7 +7,6 @@ function toggleLoader() {
     alert(error.message)
   }
 
-
   function checkValidity(event) {
     const formNode = event.target.form
     const isValid = formNode.checkValidity()
@@ -15,25 +14,27 @@ function toggleLoader() {
     formNode.querySelector('button').disabled = !isValid
   }
 
-
-
-
 function onSuccess(formNode) {
     alert('Ваша заявка отправлена!')
     formNode.classList.toggle('hidden')
   }
 
+
 function serializeForm(formNode) {
-    const data = new FormData(formNode);
+    let data = new FormData(formNode);
     console.log(Array.from(data.entries()))
+    var object = {};
+    data.forEach(function(value, key){ object[key] = value; });
+    console.log(JSON.stringify(object));
+    data = JSON.stringify(object);
     return data;
   }
 
   async function sendData(data) {
-    return await fetch('https://pavelsmirnov.somee.com/api/Comments', {
+    return await fetch('http://pavelsmirnov.somee.com/api/Comments', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
+      body: data,
     })
   }
 
@@ -41,25 +42,26 @@ function serializeForm(formNode) {
   
 
 async function handleFormSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     
-    const data = serializeForm(event.target);
-    toggleLoader()
+    let data = serializeForm(event.target);
+    toggleLoader();
+    console.log(data);
     const {status} = await sendData(data);
-    toggleLoader()
+    toggleLoader();
 
-    console.log(status);
+
 
     if (status === 200) {
         onSuccess(event.target);
   } else {
+    console.log(status);
     onError(error);
   }
 }
-
   const applicantForm = document.getElementById('grade-form');
   applicantForm.addEventListener('submit', handleFormSubmit);
-  applicantForm.addEventListener('input', checkValidity)
+  applicantForm.addEventListener('input', checkValidity);
   
 
 
