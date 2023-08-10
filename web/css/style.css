@@ -1,3 +1,4 @@
+
 /* Обнуляющий стиль */
 *{
     padding: 0;
@@ -42,7 +43,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 body{
     /* width: 1440px; */
     color: #fff;
-    font-family: sans-serif;
+    font-family: "DM Sans";
     font-style: normal;
     background: #191919;
     padding: 0 4.38rem 0 4.38rem;
@@ -56,7 +57,6 @@ body{
         height: 100%;
         width: 1440px;
         color: #fff;
-        font-family: sans-serif;
         font-style: normal;
         background: #191919;
     }
@@ -183,11 +183,18 @@ img {
     top: -1.7rem;
     left: -1.7rem;
 }
+.main__list {
+    /* align-items: center; */
+}
+.main__list__column {
+    padding: 0 3.75rem 0 3.75rem;
+    display: flex;
+    flex-direction: column;
+}
 
 .main__text{
     line-height: 5.5rem;
     letter-spacing: 0.3rem;
-    padding: 0 3.75rem 0 3.75rem;
 }
 .main__text__underline-word{
     display: inline-flex;
@@ -195,9 +202,19 @@ img {
 }
 .next_underline{
     position: absolute;
-    top: -1rem;
+    top: -0.5rem;
     left: -0.3rem;
 }
+
+.main__imgs-text {
+    /* margin: 4.62rem 0 0 0; */
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+}
+.main__imgs-block {
+    
+}
+
 
 .jumbotron{
     padding: 5rem 0 0 0;
@@ -206,7 +223,6 @@ img {
 /*  Chapters  */
 
 .chapters_{
-    font-family: DM Sans;
     margin: 6.28rem 0 2.47rem 0;
     font-size: 1.125rem;
     line-height: 1.6875rem;
@@ -346,6 +362,7 @@ img {
     flex-shrink: 0;
     padding: 0 0 3rem 0;
     margin: 0 0 6.25rem 0;
+    position: relative;
 }
 @media (max-width: 992px) {
     .subscribe-form_{
@@ -357,13 +374,12 @@ img {
     line-height: 4.95rem;
     letter-spacing: 0.18rem;
     display: inline-flex;
-    position: relative;
 }
 
 .subscribe_stripes{
     position: absolute;
-    top: 13rem;
-    left: -6.7rem;
+    bottom: -2rem;
+    left: -3rem;
 }
 
 .subscribe-form__list{
