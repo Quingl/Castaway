@@ -7,8 +7,9 @@ function gradeSelector(grade){
     return `<div class=\"comment-back__body__grade\">${img}</div>`
 }
 // fillComments Block  
-async function service() {    
-    array = getFormContent();
+async function service() {   
+    let response = await getFormContent(url);
+    array = await response.json();
 
     let content = [];
 
