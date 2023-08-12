@@ -1,12 +1,11 @@
 const url = 'https://pavelsmirnov.somee.com/api/Comments'
 
-async function getFormContent(url){
+async function getComment(url){
      let response = await fetch(url);
-     console.log(response);
      return response;
  }
 
-async function sendComment(data) {
+async function postComment(data) {
     return await fetch( url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
