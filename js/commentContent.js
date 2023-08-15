@@ -27,6 +27,7 @@ async function fillCommentContainer() {
     for (let obj of content){
         let elem = document.getElementById("commentContent");
         elem.innerHTML += "<div class=\"comment-back__body\">" +
+            `<button class = \"comment-back__delete-button\" type="submit">X</button>` +
             `${gradeSelector(obj.grade)}` +
             `<div class=\"comment-back__body__text\">${obj.comment}</div>` +
             `<div class=\"comment-back__body__name\">${obj.name}</div>` +
