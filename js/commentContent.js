@@ -16,7 +16,7 @@ function errorMessage(){
 async function fillCommentContainer() {   
     let response = await getComment(url);
     array = await response.json();
-    if (!response.ok){
+    if (response.ok){
 
     let content = [];
 
