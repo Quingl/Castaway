@@ -1,9 +1,3 @@
-// let commentContent = {
-//     grade: 0,
-//     commentText: "",
-//     name:"",
-// }
-
 function gradeSelector(grade){
     let img = "";
 
@@ -13,20 +7,22 @@ function gradeSelector(grade){
     return `<div class=\"comment-back__body__grade\">${img}</div>`
 }
 
-async function service() {
-    let response = await fetch("https://pavelsmirnov.somee.com/api/Comments");
-    let array = await response.json(); 
+function errorMessage(){
+    let elem = document.getElementById("commentContent");
+    return elem.innerHTML += "<div class=\"comment-back__error-message\"> Comments not found... </div>";
+}
 
+// fillComments Block  
+async function fillCommentContainer() {   
+    let response = await getComment(url);
+    array = await response.json();
+    if (response.ok){
 
     let content = [];
 
     for(let i in array){
         content.push(array[i]);
-        console.log(i);
     }
-    console.log(array);
-
-
 
     for (let obj of content){
         let elem = document.getElementById("commentContent");
@@ -36,6 +32,9 @@ async function service() {
             `<div class=\"comment-back__body__name\">${obj.name}</div>` +
     "</div>";
     }
+} else {
+    errorMessage();
 }
-service();
+}
+fillCommentContainer();
 

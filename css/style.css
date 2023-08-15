@@ -414,7 +414,13 @@ img {
     line-height: 1.8rem;
     padding: 0 0 3.19rem 0;
 }
-
+.comment-back__error-message {
+    margin: 0 auto;
+    font-family: "DM Sans";
+    font-size: 4.375rem;
+    line-height: 5.5rem;
+    letter-spacing: 0.2rem;
+}
 
 /* Footer */
 
