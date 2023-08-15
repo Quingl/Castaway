@@ -28,21 +28,14 @@ function toggleLoader() {
     return JSON.stringify(objectForm);
   }
 
-  // async function sendComment(data) {
-  //   return await fetch( url, {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" },
-  //     body: data,
-  //   })
-  // }
-
+  
   async function handleFormSubmit(event) {
     event.preventDefault();
     
     let data = serializeForm(event.target);
 
     toggleLoader();
-    const {status} = await sendComment(data);
+    const {status} = await postComment(data);
     toggleLoader();
 
     if (status === 201) {
@@ -51,6 +44,7 @@ function toggleLoader() {
     onError(error);
   }
 }
+
   const applicantForm = document.getElementById('grade-form');
   
   applicantForm.addEventListener('submit', handleFormSubmit);

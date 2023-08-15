@@ -7,9 +7,10 @@ function gradeSelector(grade){
     return `<div class=\"comment-back__body__grade\">${img}</div>`
 }
 // fillComments Block  
-async function service() {   
-    let response = await getFormContent(url);
+async function fillCommentContainer() {   
+    let response = await getComment(url);
     array = await response.json();
+    if (response.ok){
 
     let content = [];
 
@@ -25,6 +26,9 @@ async function service() {
             `<div class=\"comment-back__body__name\">${obj.name}</div>` +
     "</div>";
     }
+} else {
+    console.log(`Comments is not added on page, status: ${response.status}`);
 }
-service();
+}
+fillCommentContainer();
 
