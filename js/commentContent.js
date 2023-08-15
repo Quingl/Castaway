@@ -6,11 +6,17 @@ function gradeSelector(grade){
     }
     return `<div class=\"comment-back__body__grade\">${img}</div>`
 }
+
+function errorMessage(){
+    let elem = document.getElementById("commentContent");
+    return elem.innerHTML += "<div class=\"comment-back__error-message\"> Comments not found... </div>";
+}
+
 // fillComments Block  
 async function fillCommentContainer() {   
     let response = await getComment(url);
     array = await response.json();
-    if (response.ok){
+    if (!response.ok){
 
     let content = [];
 
@@ -27,7 +33,7 @@ async function fillCommentContainer() {
     "</div>";
     }
 } else {
-    console.log(`Comments is not added on page, status: ${response.status}`);
+    errorMessage();
 }
 }
 fillCommentContainer();
