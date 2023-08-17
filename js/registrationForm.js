@@ -1,5 +1,5 @@
 function toggleLoader() {
-    const loader = document.getElementById('loader');
+    const loader = document.getElementById('loader'); // в одну строку
     loader.classList.toggle('hidden');
   }
 
@@ -8,7 +8,7 @@ function toggleLoader() {
   }
 
   function checkValidity(event) {
-    const formNode = event.target.form;
+    const formNode = event.target.form; // убирай это
     const isValid = formNode.checkValidity();
   
     formNode.querySelector('button').disabled = !isValid;
@@ -16,7 +16,7 @@ function toggleLoader() {
 
   function onSuccess(formNode) {
     alert('Ваша заявка отправлена!');
-    formNode.classList.toggle('hidden');
+    formNode.classList.toggle('hidden'); // ПРОЙТИ ПО КАЖДОЙ СТРОЧКЕ КОДА И ПОНЯТЬ ЧТО ОНА ДЕЛАЕТ(ЗАГУГЛИТЬ) УБРАТЬ ВАЛИДЦИЮ
   }
 
   function serializeForm(formNode) {
@@ -34,8 +34,8 @@ function toggleLoader() {
     
     let data = serializeForm(event.target);
 
-    toggleLoader();
-    const {status} = await postComment(data);
+      toggleLoader();
+      const { status} = await postComment(data); // Возвращается еще и боди и тебе надо понять как его достать и добавить в твою форму динамички
     toggleLoader();
 
     if (status === 201) {
