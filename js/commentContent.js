@@ -8,34 +8,43 @@ function gradeSelector(grade){
 }
 
 function errorMessage(){
-    let elem = document.getElementById("commentContent");
     return elem.innerHTML += "<div class=\"comment-back__error-message\"> Comments not found... </div>";
 }
 
-// fillComments Block  
+function commentSample(obj, elem){
+    return elem.innerHTML += `<div id = ${obj.id} class=\"comment-back__body\">` +
+                `<button id = \'commentButton\' type = \'button\' class = \"comment-back__delete-button\">X</button>` +
+                `${gradeSelector(obj.grade)}` +
+                `<div class=\"comment-back__body__text\">${obj.comment}</div>` +
+                `<div class=\"comment-back__body__name\">${obj.name}</div>` +
+                "</div>";
+}
+
 async function fillCommentContainer() {   
     let response = await getComment(url);
-    array = await response.json();
+    let elem = document.getElementById("commentContent");
+
     if (response.ok){
+        let array = await response.json();
+        let content = [];
 
-    let content = [];
+        for(let i in array){
+            content.push(array[i]);
+        }
 
-    for(let i in array){
-        content.push(array[i]);
+        for (let obj of content){
+            commentSample(obj, elem);
+        }
+        
+        const removeContainer = document.getElementById('commentContent');
+        removeContainer.addEventListener('click', element => {if (element.target.id == 'commentButton'){
+            removeComment(element.target.parentElement.id)
+        }
+    });
+
+    } else {
+        errorMessage(elem);
     }
-
-    for (let obj of content){
-        let elem = document.getElementById("commentContent");
-        elem.innerHTML += "<div class=\"comment-back__body\">" +
-            `<button class = \"comment-back__delete-button\" type="submit">X</button>` +
-            `${gradeSelector(obj.grade)}` +
-            `<div class=\"comment-back__body__text\">${obj.comment}</div>` +
-            `<div class=\"comment-back__body__name\">${obj.name}</div>` +
-    "</div>";
-    }
-} else {
-    errorMessage();
-}
 }
 fillCommentContainer();
 
