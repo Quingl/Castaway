@@ -421,6 +421,15 @@ img {
     line-height: 5.5rem;
     letter-spacing: 0.2rem;
 }
+.comment-back__delete-button {
+    font-size: medium;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+    margin: 0 0 0 19rem;
+    color: #fdfdfd7a;
+}
 
 /* Footer */
 
