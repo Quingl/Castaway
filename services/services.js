@@ -1,20 +1,17 @@
 const url = 'https://pavelsmirnov.somee.com/api/Comments/'
 
-const getComment = async (url) => { // не надо передавать тут юрл 
-     let response = await fetch(url);// в одну строку 
-     return response;
- }
+const getComment = async () => { return response = await fetch(url); }// РЅРµ РЅР°РґРѕ РїРµСЂРµРґР°РІР°С‚СЊ С‚СѓС‚ СЋСЂР» 
+     // РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ 
 
-async function postComment(data) { // изменить назваение data на comment 
+async function postComment(data) { // РёР·РјРµРЅРёС‚СЊ РЅР°Р·РІР°РµРЅРёРµ data РЅР° comment 
     return await fetch( url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" }, // проверить нужны ли хеддеры
+      headers: { 'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*" }, // РїСЂРѕРІРµСЂРёС‚СЊ РЅСѓР¶РЅС‹ Р»Рё С…РµРґРґРµСЂС‹
       body: data,
     })
   }
 
-  async function removeComment(id){ //delete, а не remove
-    console.log(url + id); // опять консоль лог
+  async function removeComment(id){ //delete, Р° РЅРµ remove
     return await fetch( url + id, {
       method: 'DELETE',
     })
