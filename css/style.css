@@ -384,7 +384,9 @@ img {
 .subscribe-form__inputs__email-inp{
     margin: 1.25rem 0 1.25rem 0;
 }
-
+.hidden {
+    display: none;
+}
 /*  Feedback  */
 
 

@@ -116,18 +116,18 @@
                         </select>
                       </label>
                       <br><br>
-                    <label for="name" required>
+                    <label for="name" required> 
                         Nickname
-                      <input type="text" name="name">
+                      <input type="text" minlength="1" maxlength="50" required name="name">
                     </label>
                     <br><br>
                     <label for="comment">
                         Reviev
-                        <input type="text" name="comment">
+                        <input type="text" minlength="0" maxlength="200" name="comment">
                       </label>
                       <br><br>
-                    <button type="submit">Сохранить</button>
-                    <div id="loader" hidden>Отправляем...</div>
+                    <button type="submit" class="grade-form_button" disabled>Сохранить</button>
+                    <div id="loader" class = "hidden">Отправляем...</div>
                   </form>
             </div>
         </div>

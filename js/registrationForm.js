@@ -1,49 +1,44 @@
 const toggleLoader = () => document.getElementById('loader').classList.toggle('hidden'); // в одну строку
 
- const onError = (error) => alert(error.message);
+ const onError = () => alert("Error");
 
-  function checkValidity(event) {
+ const checkValidity = (event) => {
     const formNode = event.target.form; // убирай это
     const isValid = formNode.checkValidity();
   
-    formNode.querySelector('button').disabled = !isValid;
+    formNode.querySelector('.grade-form_button').disabled = !isValid;
   }
 
- const onSuccess = (formNode) => {
-    alert('Ваша заявка отправлена!');
-    formNode.classList.toggle('hidden'); // ПРОЙТИ ПО КАЖДОЙ СТРОЧКЕ КОДА И ПОНЯТЬ ЧТО ОНА ДЕЛАЕТ(ЗАГУГЛИТЬ) УБРАТЬ ВАЛИДЦИЮ
-  }
+ const onSuccess = () => alert('Ваша заявка отправлена!'); // ПРОЙТИ ПО КАЖДОЙ СТРОЧКЕ КОДА И ПОНЯТЬ ЧТО ОНА ДЕЛАЕТ(ЗАГУГЛИТЬ) УБРАТЬ ВАЛИДЦИЮ
+  
 
-  function serializeForm(formNode) {
-    let data = new FormData(formNode);
+const serializeForm = (formNode) => {
+    let objectForm = {};
 
-    var objectForm = {};
-
-    data.forEach(function(value, key){ objectForm[key] = value; });
+    new FormData(formNode).forEach(function(value, key){ objectForm[key] = value; });
     return JSON.stringify(objectForm);
   }
 
   
-  async function handleFormSubmit(event) {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
-    let data = serializeForm(event.target);
 
       toggleLoader();
-      const { status} = await postComment(data); // Возвращается еще и боди и тебе надо понять как его достать и добавить в твою форму динамически
+      const response = await postComment(serializeForm(event.target)); // Возвращается еще и боди и тебе надо понять как его достать и добавить в твою форму динамически
     toggleLoader();
 
-    if (status === 201) {
-      onSuccess(event.target);
+    if (response.status === 201) {
+      onSuccess();
+      document.getElementById("commentConteiner").innerHTML += commentItemToHTML(await response.json());
   } else {
-    onError(error);
+    onError();
   }
 }
 
   const applicantForm = document.getElementById('grade-form');
   
   applicantForm.addEventListener('submit', handleFormSubmit);
-  // applicantForm.addEventListener('input', checkValidity);
+  applicantForm.addEventListener('input', checkValidity);
   
 
 
