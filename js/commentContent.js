@@ -17,6 +17,10 @@ const commentItemToHTML = (commentItem) =>
     `<div class="comment-back__body__name">${commentItem.name}</div>` +
         "</div>";
 
+const commentOut = (deletedComment) => {
+    deletedComment.outerHTML = ``;
+}
+
 const fillCommentContainer = async () => {
     let response = await getComment(); 
     let commentContainer = document.getElementById("commentConteiner"); 
@@ -26,9 +30,9 @@ const fillCommentContainer = async () => {
             commentContainer.innerHTML += commentItemToHTML(commentItem); 
      
         commentContainer.addEventListener('click', (event) => 
-        (event.target.id == 'commentButton') ? removeComment(event.target.parentElement.id) : false);
+        (event.target.id == 'commentButton') ? removeComment(event.target.parentElement.id) & commentOut(event.target.parentElement) : false);
     } else
-        commentContainer.innerHTML = errorMessage(); 
+        commentContainer.innerHTML = errorMessage();
 }
 
 fillCommentContainer();
