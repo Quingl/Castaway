@@ -183,10 +183,9 @@ img {
     top: -1.7rem;
     left: -1.7rem;
 }
-.main__list {
-    /* align-items: center; */
-}
+
 .main__list__column {
+    
     padding: 0 3.75rem 0 3.75rem;
     display: flex;
     flex-direction: column;
@@ -206,13 +205,17 @@ img {
     left: -0.3rem;
 }
 
+.main__links {
+    padding: 0 0 0 5.12rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .main__imgs-text {
+    padding: 0 0 1rem 0;
     /* margin: 4.62rem 0 0 0; */
     font-size: 0.9375rem;
     line-height: 1.5rem;
-}
-.main__imgs-block {
-    
 }
 
 
@@ -407,12 +410,12 @@ img {
 .comment-back_{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    /* justify-content: stretch; */
 }
 
 .comment-back__body {
-    margin: 0 0 1rem 0;
-    padding: 2rem;
+    margin: 0.5rem;
+    padding: 2rem;  
     width: 26.0625rem;
     height: 20.0625rem;
     border-radius: 2rem;
