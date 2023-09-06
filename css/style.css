@@ -185,13 +185,14 @@ img {
 }
 
 .main__list__column {
-    
+    margin-bottom: 5rem;
     padding: 0 3.75rem 0 3.75rem;
     display: flex;
     flex-direction: column;
 }
 
 .main__text{
+    margin-top: 5rem;
     line-height: 5.5rem;
     letter-spacing: 0.3rem;
 }
@@ -213,7 +214,6 @@ img {
 
 .main__imgs-text {
     padding: 0 0 1rem 0;
-    /* margin: 4.62rem 0 0 0; */
     font-size: 0.9375rem;
     line-height: 1.5rem;
 }
