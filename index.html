@@ -2,42 +2,60 @@
 <html lang="ru">
     <head>
         <title>CSS part 5</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
     </head>
     <body>
+        <a name="top"></a>
         <div class="header_">
                     <div class="header__logo">
                         <img src="img/IMAGE (1).png" alt="wOops">
                     </div>                   
                     <div class="header__navigation">
-                        <a class="home" href="https://doka.guide/">Home</a>
-                        <a href="https://www.google.com/">Episodes</a>
-                        <a href="https://www.google.com/">About</a>
-                        <a href="https://www.google.com/">Contact</a>
+                        <a class="home" href="#top">Home</a>
+                        <a href="#episodes">Episodes</a>
+                        <a href="#about">About</a>
+                        <a href="#bottom">Contact</a>
                     </div>
         </div>  
 
-        <div class="main_ jumbotron">
+        <div class="main_">
             <div class="main__block">
-                <img class="main__img" src="img/IMAGE.png" alt="Man in headphones" title="Take your podcast to the next level">
+                <img src="img/IMAGE.png" alt="Man in headphones" title="Take your podcast to the next level">
                 <img class="main__stripes" src="img/IMAGE (9).png" alt="stripes of happiness">
             </div>
-            <div  class="main__text">
-                <h1>Take your podcast to the <div class="main__text__underline-word">next <img class="next_underline" src="img/IMAGE (8).png" alt="next_underline"></div> <b> level</b></h1>
+            <div class="main__list">
+                <div class="main__list__column">
+                    <div  class="main__text">
+                        <h1>Take your podcast to the <div class="main__text__underline-word">next <img class="next_underline" src="img/IMAGE (8).png" alt="next_underline"></div> <b> level</b></h1>
+                    </div>
+                </div>
+                <div class="main__links">
+                    <div class="main__imgs-text">Listen on</div>
+                    <div class="main__imgs-block">
+                        <a href="#"><img src="img/spotify.png" alt="spotify"></a>
+                            <a href="#"><img src="img/redThing.png" alt="redThing"></a>
+                            <a href="#"><img src="img/orangeThing.png" alt="orangeThing"></a>
+                            <a href="#"><img src="img/purpleThing.png" alt="purpleThing"></a>
+                            <a href="#"><img src="img/whiteThing.png" alt="whiteThing"></a>
+                    </div>
+                </div>
             </div>
+            
         </div>
 
-        <div class="chapters_ jumbotron">
+        <a name="episodes"></a>
+        <div class="chapters_">
             <div class="chapters__header">
                 <div class="chapters__header__text">Latest episodes</div>
-                <div><button class="chapters__header__button">View all episodes</button></div>
+                <button class="chapters__header__button">View all episodes</button>
             </div>
             <div class="chapters__form">
-                <div class="chapters__form__img">
-                    <img src="img/IMAGE (2).png" alt="some things" title="Should you get outboard audio gear?">
-                </div>
+                <img src="img/IMAGE (2).png" class="chapters__form__img" alt="some things" title="Should you get outboard audio gear?">
                 <div class="chapters__form__list">
                     <button class="chapters__form__section-button">Gear</button>
                     <div class="chapters__form__episode">Episode 3</div>
@@ -50,9 +68,7 @@
             </div>
 
             <div class="chapters__form">
-                <div class="chapters__form__img">
-                    <img src="img/IMAGE (3).png" alt="microphone" title="Mic tricks to take you to the next level">
-                </div>
+                <img src="img/IMAGE (3).png" class="chapters__form__img" alt="microphone" title="Mic tricks to take you to the next level">
                 <div class="chapters__form__list">
                     <button class="chapters__form__section-button">Tips & Tricks</button>
                     <div class="chapters__form__episode">Episode 2</div>
@@ -65,9 +81,7 @@
             </div>
 
             <div class="chapters__form">
-                <div class="chapters__form__img">
-                    <img src="img/IMAGE (4).png" alt="Man with mic" title="The best microphone under $200">
-                </div>
+                <img src="img/IMAGE (4).png" class="chapters__form__img" alt="Man with mic" title="The best microphone under $200">
                 <div class="chapters__form__list">
                     <button class="chapters__form__section-button">Gear</button>
                     <div class="chapters__form__episode">Episode 1</div>
@@ -81,8 +95,8 @@
             </div>
         </div>
 
-
-        <div class="biography_ jumbotron">
+        <a name="about"></a>
+        <div class="biography_">
             <div class="biography__list">
                 <button class="biography__list__circle-button"><img src="img/IMAGE (6).png" alt="pointer"></button>
                 <div class="biography__list__sign">Meet your host</div>
@@ -98,9 +112,10 @@
         </div>
 
         <div class="subscribe-form_">
+            <img class="subscribe_stripes" src="img/IMAGE (10).png" alt="subscribe_stripes">
             <div class="subscribe-form__list">
-                <div class="subscribe-form__list__name">Email Newsletter</div>
-                <div class="subscribe-form__list__text">Subscribe for updates <img class="subscribe_stripes" src="img/IMAGE (10).png" alt="subscribe_stripes"></div>
+                <div class="subscribe-form__list__name">Reviev form</div>
+                <div class="subscribe-form__list__text">U are always welcome!</div>
             </div>
             <div class="subscribe-form__inputs">
 
@@ -114,20 +129,11 @@
                           <option value="2">2</option>
                           <option value="1">1</option>
                         </select>
-                      </label>
-                      <br><br>
-                    <label for="name" required>
-                        Nickname
-                      <input type="text" name="name">
                     </label>
-                    <br><br>
-                    <label for="comment">
-                        Reviev
-                        <input type="text" name="comment">
-                      </label>
-                      <br><br>
-                    <button type="submit">Сохранить</button>
-                    <div id="loader" class="hidden">Отправляем...</div>
+                      <input type="text" id = "inputName" placeholder="Name" name="name" required>
+                        <input type="text" id = "inputComment" placeholder="Comment" name="comment">
+                    <button type="submit" class="subscribe-form__inputs__button">Submit</button>
+                    <div id="loader" class="hidden">Sending...</div>
                   </form>
             </div>
         </div>
@@ -137,7 +143,7 @@
     </div>
 
 
-
+    <a name="bottom"></a>
         <div class="footer_ jumbotron">
             <div class="footer__images">
                 <img src="img/footerLogo.png" alt="footerLogo">
@@ -174,9 +180,4 @@
         <script src="js/commentContent.js"></script>
         <script src="js/registrationForm.js"></script>
     </body>
-    <div>
-        <div>
-            <div></div><div></div>
-        </div>
-    </div>
 </html>
