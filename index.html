@@ -23,7 +23,7 @@
                     </div>
         </div>  
 
-        <div class="main_ jumbotron">
+        <div class="main_">
             <div class="main__block">
                 <img src="img/IMAGE.png" alt="Man in headphones" title="Take your podcast to the next level">
                 <img class="main__stripes" src="img/IMAGE (9).png" alt="stripes of happiness">
@@ -49,10 +49,10 @@
         </div>
 
         <a name="episodes"></a>
-        <div class="chapters_ jumbotron">
+        <div class="chapters_">
             <div class="chapters__header">
                 <div class="chapters__header__text">Latest episodes</div>
-                <div><button class="chapters__header__button">View all episodes</button></div>
+                <button class="chapters__header__button">View all episodes</button>
             </div>
             <div class="chapters__form">
                 <img src="img/IMAGE (2).png" class="chapters__form__img" alt="some things" title="Should you get outboard audio gear?">
@@ -96,7 +96,7 @@
         </div>
 
         <a name="about"></a>
-        <div class="biography_ jumbotron">
+        <div class="biography_">
             <div class="biography__list">
                 <button class="biography__list__circle-button"><img src="img/IMAGE (6).png" alt="pointer"></button>
                 <div class="biography__list__sign">Meet your host</div>
@@ -129,18 +129,9 @@
                           <option value="2">2</option>
                           <option value="1">1</option>
                         </select>
-                      </label>
-                      <br><br>
-                    <label for="name">
-                        Nickname
-                      <input type="text" name="name" required>
                     </label>
-                    <br><br>
-                    <label for="comment">
-                        Reviev
-                        <input type="text" name="comment">
-                      </label>
-                      <br><br>
+                      <input type="text" id = "inputName" placeholder="Name" name="name" required>
+                        <input type="text" id = "inputComment" placeholder="Comment" name="comment">
                     <button type="submit" class="subscribe-form__inputs__button">Submit</button>
                     <div id="loader" class="hidden">Sending...</div>
                   </form>
