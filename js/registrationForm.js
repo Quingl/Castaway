@@ -1,47 +1,37 @@
-function toggleLoader() {
-    const loader = document.getElementById('loader');
-    loader.classList.toggle('hidden');
-  }
+const toggleLoader = () => document.getElementById('loader').classList.toggle('hidden'); // в одну строку
 
-  function onError(error) {
-    alert(error.message);
-  }
+ const onError = () => alert("Error");
 
-  function checkValidity(event) {
-    const formNode = event.target.form;
+ const checkValidity = (event) => {
+    const formNode = event.target.form; // убирай это
     const isValid = formNode.checkValidity();
   
-    formNode.querySelector('button').disabled = !isValid;
+    formNode.querySelector('.grade-form_button').disabled = !isValid;
   }
 
-  function onSuccess(formNode) {
-    alert('Ваша заявка отправлена!');
-    formNode.classList.toggle('hidden');
-  }
+ const onSuccess = () => alert('Ваша заявка отправлена!'); // ПРОЙТИ ПО КАЖДОЙ СТРОЧКЕ КОДА И ПОНЯТЬ ЧТО ОНА ДЕЛАЕТ(ЗАГУГЛИТЬ) УБРАТЬ ВАЛИДЦИЮ
+  
 
-  function serializeForm(formNode) {
-    let data = new FormData(formNode);
+const serializeForm = (formNode) => {
+    let objectForm = {};
 
-    var objectForm = {};
-
-    data.forEach(function(value, key){ objectForm[key] = value; });
+    new FormData(formNode).forEach(function(value, key){ objectForm[key] = value; });
     return JSON.stringify(objectForm);
   }
 
   
-  async function handleFormSubmit(event) {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
-    let data = serializeForm(event.target);
 
-    toggleLoader();
-    const {status} = await postComment(data);
+      toggleLoader();
+      const response = await postComment(serializeForm(event.target)); // Возвращается еще и боди и тебе надо понять как его достать и добавить в твою форму динамически
     toggleLoader();
 
-    if (status === 201) {
-      onSuccess(event.target);
+    if (response.status === 201) {
+      onSuccess();
+      document.getElementById("commentConteiner").innerHTML += commentItemToHTML(await response.json());
   } else {
-    onError(error);
+    onError();
   }
 }
 

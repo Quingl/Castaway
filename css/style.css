@@ -455,7 +455,9 @@ select:hover {
     border-radius: 0.375rem;
 
 }
-
+.hidden {
+    display: none;
+}
 /*  Feedback  */
 
 .comment-back_{
