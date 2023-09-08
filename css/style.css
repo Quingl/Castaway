@@ -125,7 +125,7 @@ input:hover {
 
 /*  img OPTIONS  */
 img {
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 
 /*  Header  */
@@ -207,7 +207,7 @@ img {
 }
 
 .main__links {
-    padding: 0 0 0 5.12rem;
+    padding: 0 0 0 1.37rem;
     display: flex;
     flex-direction: column;
 }
